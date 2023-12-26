@@ -13,15 +13,15 @@ app.post('', (req, res) => {
 	const content = req.body;
 	console.log(content);
 
-	fetch(`http://localhost:${SYS_SendMail_Port}`, {
+	fetch(`http://192.168.0.79:${SYS_SendMail_Port}`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
 		},
 		body: JSON.stringify({
 			email: req.body.email,
-			token: 'hfse9f839r82r-ef89wgwgwg-fw9eg9we-3457384579',
 			type: 'token',
+			text: 'voici votre token : hfse9f839r82r-ef89wgwgwg-fw9eg9we-3457384579',
 		}),
 	});
 });

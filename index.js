@@ -21,6 +21,7 @@ app.post('', (req, res) => {
 		body: JSON.stringify({
 			email: req.body.email,
 			token: 'hfse9f839r82r-ef89wgwgwg-fw9eg9we-3457384579',
+			type: 'token',
 		}),
 	});
 });

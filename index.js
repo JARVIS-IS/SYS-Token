@@ -13,7 +13,7 @@ app.post('', (req, res) => {
 	const content = req.body;
 	console.log(content);
 
-	fetch(`http://192.168.0.79:${SYS_SendMail_Port}`, {
+	fetch(`http://192.168.0.97:${SYS_SendMail_Port}`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',

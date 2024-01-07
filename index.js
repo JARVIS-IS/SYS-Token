@@ -9,7 +9,7 @@ const SYS_SendMail_Port = 3003;
 app.use(express.json());
 app.use(cors());
 
-app.post('', (req, res) => {
+app.post('/new', (req, res) => {
 	const content = req.body;
 	console.log(content);
 	fetch(`http://192.168.0.97:${SYS_SendMail_Port}`, {
@@ -20,7 +20,7 @@ app.post('', (req, res) => {
 		body: JSON.stringify({
 			email: req.body.email,
 			type: 'token',
-			text: 'voici votre token : hfse9f839r82r-ef89wgwgwg-fw9eg9we-3457384579',
+			text: 'voici votre token : hfse9f839r82r:ef89wgwgwg:fw9eg9we:3457384579',
 		}),
 	});
 });

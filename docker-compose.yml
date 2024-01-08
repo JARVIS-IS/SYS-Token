@@ -1,8 +1,8 @@
 version: '3.4'
 services:
-    tokengenerator_docker:
+    token_docker:
         image: node:alpine
-        container_name: SYS-TokenGenerator
+        container_name: SYS-Token
         command: /bin/sh -c "cd /srv/app && npm install && node index.js"
         ports:
             - 3001:3001
